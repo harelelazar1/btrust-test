@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "0fadea30-aa84-455b-82ae-4b3258de0ddd",
+		"name": "Liad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "QA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4122ba73-3304-4b9d-a958-aa07f34c4dc8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "flowId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "ocrCaseId",
+							"value": "111",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btrustqa.scanovate.com/api/flow/2/link",
+					"protocol": "https",
+					"host": [
+						"btrustqa",
+						"scanovate",
+						"com"
+					],
+					"path": [
+						"api",
+						"flow",
+						"2",
+						"link"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
