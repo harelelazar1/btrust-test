@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Console Admin User Management">
+
+    <test name="Users">
+        <packages>
+            <package name="btrust.btrustOne.admin.usersManager.users.tests"/>
+        </packages>
+    </test>
+    <test name="Departments">
+        <packages>
+            <package name="btrust.btrustOne.admin.usersManager.departmentsPage.tests"/>
+        </packages>
+    </test>
+    <test name="Roles and Permissions">
+        <packages>
+            <package name="btrust.btrustOne.admin.usersManager.rolesAndPermissions.tests"/>
+        </packages>
+    </test>
+    <test name="Sub Companies">
+        <packages>
+            <package name="btrust.btrustOne.admin.usersManager.subCompaniesPage.tests"/>
+        </packages>
+    </test>
+</suite>

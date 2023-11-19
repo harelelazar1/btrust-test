@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OCR API" time-out="5000000">
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="Green Id API">
+        <packages>
+            <package name="api.ocr.israelId.greenId.*"/>
+        </packages>
+    </test> <!-- Test -->
+
+    <test name="Blue Id API">
+        <packages>
+            <package name="api.ocr.israelId.blueId.*"/>
+        </packages>
+    </test>
+
+    <test name="Bio Id API">
+        <packages>
+            <package name="api.ocr.israelId.bioId.*"/>
+        </packages>
+    </test>
+
+    <test name="Israel Old Dl API">
+        <packages>
+            <package name="api.ocr.dl.oldDl.*"/>
+        </packages>
+    </test>
+
+    <test name="Israel New Dl API">
+        <packages>
+            <package name="api.ocr.dl.newDl.*"/>
+        </packages>
+    </test>
+
+    <test name="Europe Cards API" >
+        <packages>
+            <package name="api.ocr.cni.newVersion.*"/>
+        </packages>
+    </test>
+
+    <test name="Old MRZ API">
+        <packages>
+            <package name="api.ocr.mrz.oldMrz.*"/>
+        </packages>
+    </test>
+
+    <test name="New MRZ API">
+        <packages>
+            <package name="api.ocr.mrz.newMrz.*"/>
+        </packages>
+    </test>
+
+    <test name="Capture API">
+        <packages>
+            <package name="api.ocr.capture.*"/>
+        </packages>
+    </test>
+
+    <test name="Errors API">
+        <classes>
+            <class name="api.ocr.ClientInitOcrErrorTest"/>
+            <class name="api.ocr.ClientRequestOcrErrorTest"/>
+        </classes>
+    </test>
+
+    <test name="Single Frame API">
+        <packages>
+            <package name="api.ocr.singleFrame.*"/>
+        </packages>
+    </test>
+
+</suite> <!-- Suite -->

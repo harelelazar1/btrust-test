@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Console Admin" time-out="4800000" >
+    <test name="General-Client UI Admin">
+        <packages>
+            <package name="btrust.btrustOne.admin.generalAdmin.clientUiConfig.tests"/>
+        </packages>
+    </test>
+    <test name="General-Dashboards Admin">
+        <packages>
+            <package name="btrust.btrustOne.admin.generalAdmin.dashboards.tests"/>
+        </packages>
+    </test>
+    <test name="General-Languages And Translation Admin">
+        <packages>
+            <package name="btrust.btrustOne.admin.generalAdmin.languagesAndTranslations.tests"/>
+        </packages>
+    </test>
+    <test name="Data Module-Entities Management">
+        <packages>
+            <package name="btrust.btrustOne.admin.dataModule.entitiesManagement.tests"/>
+            <package name="btrust.btrustOne.admin.dataModule.entitiesManagement.tests.createBusinessCategory"/>
+        </packages>
+    </test>
+    <test name="Data Module-Data Mapper">
+    <packages>
+        <package name="btrust.btrustOne.admin.dataModule.dataMapper.tests"/>
+    </packages>
+</test>
+    <test name="Data Module-Document Management">
+        <packages>
+            <package name="btrust.btrustOne.admin.dataModule.documentManagement.tests"/>
+        </packages>
+    </test>
+    <test name="Data Module-Service Marketplace">
+        <packages>
+            <package name="btrust.btrustOne.admin.dataModule.serviceMarketPlace.tests"/>
+        </packages>
+    </test>
+
+    <test name="Workflow Management-Workflow Builder">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.workflowBuilder.tests"/>
+        </packages>
+    </test>
+    <test name="Workflow Management-Triggers">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.triggersPage.tests"/>
+        </packages>
+    </test>
+    <test name="Workflow Management-Mobile Forms">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.mobileForms.tests"/>
+        </packages>
+    </test>
+    <test name="Workflow Management-Mobile Interactions">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.mobileInteraction.tests"/>
+        </packages>
+    </test>
+<!--        <suite-files>-->
+<!--            <suite-file path="userManagement.xml"></suite-file>-->
+<!--        </suite-files>-->
+</suite>

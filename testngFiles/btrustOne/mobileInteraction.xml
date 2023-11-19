@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Mobile Interaction Flows" time-out="4200000">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+    <test name="V2 API">
+        <packages>
+            <package name="btrust.onboardingProcess.api.v2"/>
+            <package name="btrust.onboardingProcess.api.v2.authenticationTests"/>
+        </packages>
+    </test>
+    <test name="Client UI">
+        <packages>
+            <package name="btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.Sanity"/>
+        </packages>
+    </test>
+    <test name="Redirect URL">
+        <packages>
+            <package name="btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.redirectUrl"/>
+        </packages>
+    </test>
+    <test name="Services Alive Check">
+        <packages>
+            <package name="btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.checkServicesUp"/>
+        </packages>
+    </test>
+</suite>

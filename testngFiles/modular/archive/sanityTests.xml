@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sanity tests package">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="demo">
+        <classes>
+            <class name="selenium.liveness.test.newServer.newVersion.passive.SanityTest"/>
+            <class name="selenium.liveness.test.newServer.newVersion.active.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.capture.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.cni.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.bioId.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.blueId.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.greenId.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.denmarkDrivingLicense.newDKDL.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.denmarkDrivingLicense.oldDKDL.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.mrz.newMrz.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.mrz.oldMrz.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.philippinesCheque.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.oldDl.SanityTest"/>
+            <class name="selenium.ocr.test.newServer.newDl.SanityTest"/>
+        </classes>
+    </test>
+
+    <test name="api">
+        <classes>
+            <class name="api.liveness.newVersion.passive.SanityTest"/>
+            <class name="api.liveness.newVersion.active.SanityTest"/>
+            <class name="api.ocr.philippinesCheque.SanityTest"/>
+            <class name="api.ocr.mrz.oldMrz.SanityTest"/>
+            <class name="api.ocr.mrz.newMrz.SanityTest"/>
+            <class name="api.ocr.denmarkDrivingLicense.oldDKDL.SanityTest"/>
+            <class name="api.ocr.denmarkDrivingLicense.newDKDL.SanityTest"/>
+            <class name="api.ocr.cni.newVersion.EuropeCardSanityTest"/>
+            <class name="api.ocr.capture.SanityTest"/>
+            <class name="api.ocr.dl.newDl.SanityTest"/>
+            <class name="api.ocr.dl.oldDl.SanityTest"/>
+            <class name="api.ocr.israelId.bioId.SanityTest"/>
+            <class name="api.ocr.israelId.blueId.SanityTest"/>
+            <class name="api.ocr.israelId.greenId.SanityTest"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

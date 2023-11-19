@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="B-Trust Tests" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test thread-count="4" name="Docker Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="docker.onboarding.DockerTestOnboardingProcess"></class>
+            <class name="docker.console.LoginTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->

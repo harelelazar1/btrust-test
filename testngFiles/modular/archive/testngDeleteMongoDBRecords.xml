@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MongoDB delete records">
+    <listeners>
+        <listener class-name="utilities.TestListener"></listener>
+    </listeners>
+    <test name="MongoDB Delete">
+        <classes>
+            <class name="utilities.DeleteMongoDBRecords">
+                <methods>
+                    <include name="deleteCollection"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

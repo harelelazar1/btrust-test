@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Console Client" time-out="3600000">
+
+    <test name="Login">
+        <packages>
+            <package name="btrust.btrustOne.client.login.test.*"/>
+        </packages>
+    </test>
+    <test name="Search">
+        <packages>
+            <package name="btrust.btrustOne.client.search.tests.*"/>
+        </packages>
+    </test>
+    <test name="Mobile Interaction Cases">
+        <packages>
+            <package name="btrust.btrustOne.client.mobileCases.tests.*"/>
+        </packages>
+    </test>
+    <test name="Cases">
+        <packages>
+            <package name="btrust.btrustOne.client.cases.tests.*"/>
+        </packages>
+    </test>
+    <test name="Cases Meta Data">
+        <packages>
+            <package name="btrust.btrustOne.client.casesMetaData.tests.*"/>
+        </packages>
+    </test>
+    <test name="Mandates">
+        <packages>
+            <package name="btrust.btrustOne.client.mandate.tests.*"/>
+        </packages>
+    </test>
+    <test name="Entities">
+        <packages>
+            <package name="btrust.btrustOne.client.entity.tests.*"/>
+        </packages>
+    </test>
+    <test name="Pending Cases">
+        <packages>
+            <package name="btrust.btrustOne.client.triggers.tests.*"/>
+        </packages>
+    </test>
+</suite>

@@ -4,7 +4,6 @@ import btrust.onboardingProcess.ui.pagesObject.*;
 import btrust.onboardingProcess.ui.pagesObject.questionnaire.FileTypePage;
 import btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.MobileInteractionUIBase;
 import io.qameta.allure.Description;
-import org.junit.runners.Suite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -260,59 +259,4 @@ public class ILID extends MobileInteractionUIBase {
     }
 
 
-
-
-
-  //  @Test(description = "Onboarding UI Test Questionnaire process upload ID image", retryAnalyzer = utilities.RetryAnalyzer.class)
-    @Description("Onboarding UI Test Questionnaire process upload ID image")
-    public void t05_questionnaireWithSingleFrameOfId() {
-        driver.get(createLinkToFlow(89));
-        ocrPage.chooseLanguage("English");
-        assertTrue(fileTypePage.questionTitleIsDisplayed("upload Image"));
-        fileTypePage.uploadFile("./ocr/blueID/liad/blueID.jpg");
-        assertTrue(fileTypePage.nextButton());
-        assertEquals(faceCompareResults.processEndedText(), "Process ended");
-    }
-
-//    @Test(description = "Onboarding UI Test Questionnaire process upload DL image", retryAnalyzer = utilities.RetryAnalyzer.class)
-    @Description("Onboarding UI Test Questionnaire process upload DL image")
-    public void t06_questionnaireWithSingleFrameOfDl() {
-        driver.get(createLinkToFlow(89));
-        ocrPage.chooseLanguage("English");
-        assertTrue(fileTypePage.questionTitleIsDisplayed("upload Image"));
-        fileTypePage.uploadFile("./ocr/dl/LiadDLFront.jpg");
-        assertTrue(fileTypePage.nextButton());
-        assertEquals(faceCompareResults.processEndedText(), "Process ended");
-    }
-
- //   @Test(description = "Onboarding UI Test Questionnaire process upload MRZ image", retryAnalyzer = utilities.RetryAnalyzer.class)
-    @Description("Onboarding UI Test Questionnaire process upload MRZ image")
-    public void t07_questionnaireWithSingleFrameOfMrz() {
-        driver.get(createLinkToFlow(89));
-        ocrPage.chooseLanguage("English");
-        assertTrue(fileTypePage.questionTitleIsDisplayed("upload Image"));
-        fileTypePage.uploadFile("./ocr/mrz/avner/avner2.jpg");
-        assertTrue(fileTypePage.nextButton());
-        assertEquals(faceCompareResults.processEndedText(), "Process ended");
-    }
-
- //   @Test(description = "Onboarding UI Test Scanning Lawyer card", retryAnalyzer = utilities.RetryAnalyzer.class)
-    @Description("Onboarding UI Test Scanning Lawyer card")
-    public void t08_LawId() throws IOException {
-        driver.get(createLinkToFlow(367));
-        assertTrue(ocrPage.ocrImage());
-        ocrPage.chooseLanguage("English");
-        assertEquals(ocrPage.OCRTitleIsDisplayed(), "Document Scanning");
-        assertEquals(ocrPage.subTitleOCRPage(), "Before we start make sure that:");
-        assertEquals(ocrPage.ocrDescription(), "You possess the document | The document is clean | Good lightning conditions");
-        ocrPage.clickOnButton("Scan Israel Lawyer Card");
-        imageInjectionFunctionPage.scanOCR("./ocr/lawyerID/yoram_2020_1.jpeg", null);
-        assertEquals(scanResultPage.resultsTitle(), "Scan results");
-        assertEquals(scanResultPage.results("lawyer", "ID Number"), "057798639");
-        assertEquals(scanResultPage.results("lawyer", "Full Name Hebrew"), "יורם יהודה");
-        assertEquals(scanResultPage.results("lawyer", "Full Name English"), "YORAM YEHUDA");
-        assertEquals(scanResultPage.results("lawyer", "Member Number"), "14215");
-        assertEquals(scanResultPage.results("lawyer", "Code"), "142158839");
-        assertEquals(scanResultPage.results("lawyer", "Address"), "לוי אליהו סאלם 41/30ב רמלה 7250300");
-    }
 }

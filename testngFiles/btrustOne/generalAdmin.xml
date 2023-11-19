@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Console Admin General">
+
+    <test name="Email Template Admin">
+        <packages>
+            <package name="btrust.btrustOne.admin.generalAdmin.emailTemplate.tests"/>
+        </packages>
+    </test>
+    <test name="Client UI Admin">
+        <packages>
+            <package name="btrust.btrustOne.admin.generalAdmin.clientUiConfig.tests"/>
+        </packages>
+    </test>
+    <test name="Dashboards Admin">
+        <packages>
+            <package name="btrust.btrustOne.admin.generalAdmin.dashboards.tests"/>
+        </packages>
+    </test>
+    <test name="Translations Admin">
+        <packages>
+            <package name="btrust.btrustOne.admin.generalAdmin.translations.tests"/>
+        </packages>
+    </test>
+</suite>

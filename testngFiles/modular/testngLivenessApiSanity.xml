@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Liveness API" time-out="3600000">
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="Active API">
+        <classes>
+            <class name="api.liveness.newVersion.active.SanityTest"/>
+        </classes>
+    </test>
+
+    <test name="Passive API">
+        <classes>
+            <class name="api.liveness.newVersion.passive.SanityTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+
+
+    <test name="Single frame API">
+        <packages>
+            <package name="api.liveness.newVersion.singleFrame.*"/>
+        </packages>
+    </test>
+    <test name="init/request errors API">
+        <classes>
+            <class name="api.liveness.newVersion.ClientInitLivenessErrorTest"/>
+            <class name="api.liveness.newVersion.ClientRequestLivenessErrorTest"/>
+            <class name="api.liveness.newVersion.ErrorhandlingTest"/>
+        </classes>
+    </test>
+
+
+</suite> <!-- Suite -->

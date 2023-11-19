@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="NGOCR Demo New" time-out="7800000">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="Green Id DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.greenId.SanityTest"/>
+            <class name="selenium.ngocr.test.greenId.Authentication"/>
+            <class name="selenium.ngocr.test.greenId.Errorhandling"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Green Id old DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.greenid_old.SanityTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Blue Id DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.blueId.SanityTest"/>
+            <class name="selenium.ngocr.test.blueId.Authentication"/>
+            <class name="selenium.ngocr.test.blueId.Errorhandling"/>
+        </classes>
+    </test>
+
+    <test name="Bio Id DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.bioId.SanityTest"/>
+            <class name="selenium.ngocr.test.bioId.Authentication"/>
+            <class name="selenium.ngocr.test.bioId.Errorhandling"/>
+        </classes>
+    </test>
+
+    <test name="Israel Old Dl DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.oldDl.SanityTest"/>
+            <class name="selenium.ngocr.test.oldDl.Authentication"/>
+            <class name="selenium.ngocr.test.oldDl.Errorhandling"/>
+        </classes>
+    </test>
+
+    <test name="Israel New Dl DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.newDl.SanityTest"/>
+            <class name="selenium.ngocr.test.newDl.Authentication"/>
+            <class name="selenium.ngocr.test.newDl.Errorhandling"/>
+        </classes>
+    </test>
+
+    <test name="Credit Card DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.creditCard.SanityTest"/>
+        </classes>
+    </test>
+    <test name="Stay Permit DEMO">
+        <classes>
+            <class name="selenium.ngocr.test.StayPermit.SanityTest"/>
+        </classes>
+    </test>
+    <test name="NEW MRZ">
+        <classes>
+            <class name="selenium.ngocr.test.mrz.newMrz.SanityTest"/>
+            <class name="selenium.ngocr.test.mrz.newMrz.Authentication"/>
+            <class name="selenium.ngocr.test.mrz.newMrz.Errorhandling"/>
+        </classes>
+    </test>
+    <test name="OLD MRZ">
+        <classes>
+            <class name="selenium.ngocr.test.mrz.oldMrz.SanityTest"/>
+            <class name="selenium.ngocr.test.mrz.oldMrz.Authentication"/>
+            <class name="selenium.ngocr.test.mrz.oldMrz.Errorhandling"/>
+        </classes>
+    </test>
+    <test name="REGULA">
+        <classes>
+            <class name="selenium.ngocr.test.regula.SanityTest"/>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->

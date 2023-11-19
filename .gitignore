@@ -1,0 +1,66 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.eclipse
+.allure
+
+# Intellij
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# BlueJ files
+*.ctxt
+ 
+ # Mac
+.DS_Store
+
+# VS Code
+.vscode/*
+ 
+# Maven
+log/
+target/
+.factorypath
+*.jar
+*.war
+*.ear
+*.class
+/bin
+/build
+*.log
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Test
+test-output/*
+allure-results/*
+allure-report/*
+video/*
+
+#BaseTest
+/src/test/java/selenium/BaseTest.java
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+.gradle
+/node_modules
+
+# Text reports for colors security
+textReports/
+
+# pixelated image
+/ocr/blueID/liad/saved2.png
+/ocr/blueID/liad/compressedSaved2.jpg
+/ocr/pixelatedImages/pngPixelatedImage.png
+/ocr/pixelatedImages/PreClickImage.jpg
+
+**/temp.java
+**/temp.xml

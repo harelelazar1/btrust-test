@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="temptest">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+    <test name="Single Test">
+        <classes>
+            <class name="btrust.onboardingProcess.api.harel.AuthenticationTests">
+                <methods>
+                    <include name="t01_bioIdAuthFail"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->

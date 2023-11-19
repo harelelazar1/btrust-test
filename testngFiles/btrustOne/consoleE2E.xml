@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Console End To End" time-out="3600000">
+
+    <test name="Create Entity With Workflow">
+        <classes>
+            <class name="btrust.btrustOne.client.end2End.CreateNewEntityTest"/>
+        </classes>
+    </test>
+</suite>

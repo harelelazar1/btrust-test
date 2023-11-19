@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OCR Demo" time-out="7800000">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="Green Id DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.greenId.*"/>
+        </packages>
+        <classes>
+            <class name="selenium.ocr.test.newServer.sessionsTests.greenIdSessionTests"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Blue Id DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.blueId.*"/>
+        </packages>
+        <classes>
+            <class name="selenium.ocr.test.newServer.sessionsTests.blueIdSessionTests"/>
+        </classes>
+    </test>
+
+    <test name="Bio Id DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.bioId.*"/>
+        </packages>
+        <classes>
+            <class name="selenium.ocr.test.newServer.sessionsTests.bioIdSessionTests"/>
+        </classes>
+    </test>
+
+    <test name="Israel Old Dl DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.oldDl.*"/>
+        </packages>
+        <classes>
+            <class name="selenium.ocr.test.newServer.sessionsTests.oldDlSessionTests"/>
+        </classes>
+    </test>
+
+    <test name="Israel New Dl DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.newDl.*"/>
+        </packages>
+        <classes>
+            <class name="selenium.ocr.test.newServer.sessionsTests.newDlSessionTests"/>
+        </classes>
+    </test>
+
+    <test name="CNI DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.cni.*"/>
+        </packages>
+    </test>
+
+    <test name="Old MRZ DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.mrz.oldMrz.*"/>
+        </packages>
+    </test>
+
+    <test name="New MRZ DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.mrz.newMrz.*"/>
+        </packages>
+    </test>
+
+    <test name="Capture DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.capture.*"/>
+        </packages>
+    </test>
+    <test name="Credit Card DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.creditCard.*"/>
+        </packages>
+    </test>
+    <test name="Stay Permit DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.StayPermit.*"/>
+        </packages>
+    </test>
+    <test name="Israel Lawyer Card DEMO">
+        <packages>
+            <package name="selenium.ocr.test.newServer.IsraelLawyerCard.*"/>
+        </packages>
+    </test>
+
+</suite> <!-- Suite -->

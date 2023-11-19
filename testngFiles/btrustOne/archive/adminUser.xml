@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="B-Trust Tests">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="B-Trust 1 - Admin platform tests">
+        <packages>
+            <package name="btrust.btrustOne.admin.*"/>
+        </packages>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->

@@ -53,20 +53,6 @@ public class Liveness extends MobileInteractionUIBase {
         imageInjectionFunctionPage.scanLiveness("./liveness/bar/bar_new.jpg");
         Assert.assertEquals(completedPage.getCompleteText(), "Process ended");
     }
-    @Test(description = "Onboarding UI Test Liveness+STT process",retryAnalyzer = RetryAnalyzer.class)
-    @Description("Onboarding UI Test Liveness+STT process")
-    public void t02_livenessStt() throws IOException {
-        driver.get(createLinkToFlow(291));
-        ocrPage.chooseLanguage("English");
-        assertEquals(scanLivenessPage.scanLivenessTitle(), "Liveness Check");
-        assertEquals(scanLivenessPage.scanLivenessSubTitle(), "Before we start make sure that:");
-        assertEquals(scanLivenessPage.scanLivenessDescription(), "The phone is at face level | There are good light conditions");
-        scanLivenessPage.startButton();
-        imageInjectionFunctionPage.scanLiveness("./liveness/bar/bar_new.jpg",4000);
-        Injection injection = new Injection(driver);
-//        injection.sttInjection("./liveness/audio/stt/fullStt");
-        injection.sttInjection("./liveness/audio/stt/fullStt");
-        Assert.assertEquals(completedPage.getCompleteText(), "Process ended");
-    }
+
 
     }

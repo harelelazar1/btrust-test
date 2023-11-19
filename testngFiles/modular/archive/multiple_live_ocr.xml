@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="B-Trust Tests">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+
+    <test name="B-Trust 1 - Admin platform tests">
+        <classes>
+            <class name="selenium.liveness.test.newServer.newVersion.active.SanityTest"></class>
+            <class name="selenium.ocr.test.newServer.blueId.SanityTest"></class>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->

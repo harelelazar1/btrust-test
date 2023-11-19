@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sessions Tests - QA environment">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+    <test thread-count="6" name="Test">
+        <classes>
+            <class name="selenium.ocr.test.newServer.sessionsTests.newDlSessionTests"/>
+            <class name="selenium.ocr.test.newServer.sessionsTests.oldDlSessionTests"/>
+            <class name="selenium.ocr.test.newServer.sessionsTests.blueIdSessionTests"/>
+            <class name="selenium.ocr.test.newServer.sessionsTests.bioIdSessionTests"/>
+            <class name="selenium.ocr.test.newServer.sessionsTests.greenIdSessionTests"/>
+
+<!--            <class name="selenium.liveness.test.newServer.sessionsTests.passiveLivenessSessionTests"/>-->
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

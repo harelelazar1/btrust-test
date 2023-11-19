@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Liveness Demo" time-out="3600000">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+        <listener class-name="utilities.SuiteListener"/>
+    </listeners>
+    <test name="Passive DEMO">
+        <packages>
+            <package name="selenium.liveness.test.newServer.newVersion.passive"/>
+        </packages>
+        <classes>
+            <class name="selenium.liveness.test.newServer.newVersion.Errorhandling"/>
+            <class name="selenium.liveness.test.newServer.sessionsTests.passiveLivenessSessionTests"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Active DEMO">
+        <packages>
+            <package name="selenium.liveness.test.newServer.newVersion.active"/>
+        </packages>
+    </test>
+</suite> <!-- Suite -->

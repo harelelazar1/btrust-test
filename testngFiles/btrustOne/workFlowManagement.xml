@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Console Admin Workflow Management">
+
+    <test name="Workflow Builder">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.workflowBuilder.tests"/>
+        </packages>
+    </test>
+    <test name="Triggers">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.triggersPage.tests"/>
+        </packages>
+    </test>
+    <test name="Mobile Forms">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.mobileForms.tests"/>
+        </packages>
+    </test>
+    <test name="Mobile Interactions">
+        <packages>
+            <package name="btrust.btrustOne.admin.workflowManagement.mobileInteraction.tests"/>
+        </packages>
+    </test>
+</suite>

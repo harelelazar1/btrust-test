@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="apiTests">
+    <listeners>
+        <listener class-name="utilities.TestListener"></listener>
+    </listeners>
+    <test name="face api V1">
+        <packages>
+            <package name="api.faceServer.old.*"/>
+        </packages>
+    </test>
+    
+    <test name="face api V2">
+        <packages>
+            <package name="api.faceServer.v2.*"/>
+        </packages>
+    </test>
+</suite> <!-- Suite -->
