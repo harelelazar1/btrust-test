@@ -46,7 +46,6 @@ public class SanityTests {
     String X_Session_Id1;
     String sessionId;
     String clientTranslationFileValue;
-
     boolean devMode;
 
 
