@@ -10,8 +10,10 @@ import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.DBUtils;
+import utilities.SuiteListener;
 import utilities.TestUtils;
 
 import java.io.File;
@@ -21,7 +23,7 @@ import java.util.Map;
 
 import static btrust.btrustOne.admin.BaseAdminUserTest.randomString;
 import static org.testng.Assert.*;
-
+@Listeners({SuiteListener.class})
 public class MobileConfig {
     Map<String, File> processes;
     PreProcess preProcess;

@@ -11,7 +11,9 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utilities.SuiteListener;
 
 
 import java.io.File;
@@ -24,7 +26,7 @@ import java.util.Map;
 import static btrust.btrustOne.admin.BaseAdminUserTest.randomString;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
+@Listeners({SuiteListener.class})
 public class CreateMobileInteractionFlowTest {
 
     Map<String, File> processes;

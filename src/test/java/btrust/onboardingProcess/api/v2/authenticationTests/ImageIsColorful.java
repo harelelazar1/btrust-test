@@ -12,7 +12,9 @@ import btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.MobileInteract
 import io.qameta.allure.Description;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utilities.SuiteListener;
 import utilities.TestUtils;
 
 import java.io.File;
@@ -23,6 +25,7 @@ import java.util.Map;
 import static btrust.btrustOne.admin.BaseAdminUserTest.randomString;
 import static org.testng.Assert.*;
 
+@Listeners({SuiteListener.class})
 public class ImageIsColorful extends MobileInteractionUIBase {
 
     Map<String, File> processes;

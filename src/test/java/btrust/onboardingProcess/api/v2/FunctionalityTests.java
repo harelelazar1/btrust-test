@@ -8,7 +8,9 @@ import btrust.onboardingProcess.api.variables.*;
 import io.qameta.allure.Description;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utilities.SuiteListener;
 import utilities.TestUtils;
 
 import java.io.File;
@@ -19,7 +21,7 @@ import java.util.Map;
 import static btrust.btrustOne.admin.BaseAdminUserTest.randomString;
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.*;
-
+@Listeners({SuiteListener.class})
 public class FunctionalityTests {
 
     Map<String, File> processes;
