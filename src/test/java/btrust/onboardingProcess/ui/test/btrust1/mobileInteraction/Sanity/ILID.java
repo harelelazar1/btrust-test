@@ -4,8 +4,11 @@ import btrust.onboardingProcess.ui.pagesObject.*;
 import btrust.onboardingProcess.ui.pagesObject.questionnaire.FileTypePage;
 import btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.MobileInteractionUIBase;
 import io.qameta.allure.Description;
+import org.junit.runners.Suite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utilities.SuiteListener;
 
 
 import java.io.IOException;
@@ -13,6 +16,8 @@ import java.io.IOException;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+
+@Listeners({SuiteListener.class})
 public class ILID extends MobileInteractionUIBase {
 
     OCRPage ocrPage;
@@ -24,6 +29,8 @@ public class ILID extends MobileInteractionUIBase {
     FaceCompareResultsPage faceCompareResults;
     FileTypePage fileTypePage;
     PopupPage popupPage;
+
+
 
     @BeforeMethod(alwaysRun = true)
     public void initSession() throws IOException {

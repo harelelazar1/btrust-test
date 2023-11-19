@@ -9,11 +9,13 @@ import btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.MobileInteract
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utilities.SuiteListener;
 
 import java.io.IOException;
 
-
+@Listeners({SuiteListener.class})
 public class OTP extends MobileInteractionUIBase {
 
     ScanResultPage scanResultPage;
@@ -89,26 +91,5 @@ public class OTP extends MobileInteractionUIBase {
     }
 
 
-
-//    @Test(description = "Onboarding OTP User click on the back navigation")
-//    @Description("OTP User click on the back navigation")
-//    public void t03_onboardingOtpCheckBackNavigationButton() throws IOException {
-//
-//        try {
-//            String url = createLinkToFlow(1451);
-//            driver.get(url);
-//        } catch (Exception e) {
-//            failTest("Get link error:" + e.getMessage());
-//        }
-//
-//        Assert.assertFalse(otpPage.checkIfBackNavigationButtonDisplay());
-//        Assert.assertFalse(otpPage.checkIfSendCodeButtonIsEnable());
-//        otpPage.enterPhoneNumber("526167710");
-//        Assert.assertTrue(otpPage.checkIfSendCodeButtonIsEnable());
-//        otpPage.clickOnSendCodeButton();
-//        Assert.assertFalse(otpPage.checkIfEnterCodeButtonIsEnable());
-//        otpPage.clickOnBackNavigationButton();
-//        otpPage.clickOnSendCodeButton();
-//    }
 
 }

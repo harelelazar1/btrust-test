@@ -7,11 +7,13 @@ import btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.MobileInteract
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utilities.SuiteListener;
 
 import java.io.IOException;
 
-
+@Listeners({SuiteListener.class})
 public class MobileForm extends MobileInteractionUIBase {
 
     ScanResultPage scanResultPage;

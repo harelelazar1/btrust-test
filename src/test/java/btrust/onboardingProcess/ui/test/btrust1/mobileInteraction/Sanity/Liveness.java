@@ -5,16 +5,19 @@ import btrust.onboardingProcess.ui.test.btrust1.mobileInteraction.MobileInteract
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import selenium.Injection;
 import selenium.ocr.pageObject.newService.MainPage;
 import utilities.RetryAnalyzer;
+import utilities.SuiteListener;
 
 import java.io.IOException;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+@Listeners({SuiteListener.class})
 public class Liveness extends MobileInteractionUIBase {
     CompletedPage completedPage;
     OCRPage ocrPage;

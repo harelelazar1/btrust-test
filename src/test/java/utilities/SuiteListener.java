@@ -1,6 +1,7 @@
 package utilities;
 
 import btrust.onboardingProcess.api.ApiRequests;
+import org.junit.runners.Suite;
 import org.testng.*;
 
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Properties;
+
 
 
 public class SuiteListener implements ISuiteListener {
