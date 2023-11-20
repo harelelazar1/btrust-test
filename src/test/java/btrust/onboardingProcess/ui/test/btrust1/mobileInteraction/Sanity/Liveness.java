@@ -41,7 +41,8 @@ public class Liveness extends MobileInteractionUIBase {
         completedPage = new CompletedPage(driver);
         mainPage = new MainPage(driver);
     }
-    @Test(description = "Onboarding UI Test Liveness process",retryAnalyzer = utilities.RetryAnalyzer.class)
+
+    @Test(description = "Onboarding UI Test Liveness process", retryAnalyzer = utilities.RetryAnalyzer.class)
     @Description("Onboarding UI Test Liveness process")
     public void t01_liveness() throws IOException {
         driver.get(createLinkToFlow(231));
@@ -53,6 +54,4 @@ public class Liveness extends MobileInteractionUIBase {
         imageInjectionFunctionPage.scanLiveness("./liveness/bar/bar_new.jpg");
         Assert.assertEquals(completedPage.getCompleteText(), "Process ended");
     }
-
-
-    }
+}
