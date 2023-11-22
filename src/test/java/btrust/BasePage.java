@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
@@ -24,7 +25,7 @@ public class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         js = (JavascriptExecutor) driver;
-        wait = new WebDriverWait(driver, timeOutInSeconds);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
         actions = new Actions(driver);
     }
 
@@ -125,7 +126,7 @@ public class BasePage {
     }
 
     protected void waitForElementToBeClickable(WebElement el, int timeOut) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
         wait.until(ExpectedConditions.elementToBeClickable(el));
     }
 

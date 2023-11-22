@@ -68,7 +68,7 @@ public class BaseDesktopViewTest {
                         "use-fake-ui-for-media-stream", "use-fake-device-for-media-stream", "allow-file-access-from-files");
                 capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
                 driver = new RemoteWebDriver(URI.create("http://192.168.1.194:4444/wd/hub").toURL(), capabilities);
-                BrowserVersion = capabilities.getVersion();
+                BrowserVersion = capabilities.getBrowserVersion();
                 BrowserName = capabilities.getBrowserName();
                 testContext.setAttribute("WebDriver", this.driver);
                 allureEnvironmentWriter(ImmutableMap.<String, String>builder()

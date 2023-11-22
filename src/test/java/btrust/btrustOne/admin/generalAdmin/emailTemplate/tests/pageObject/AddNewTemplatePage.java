@@ -2,7 +2,7 @@ package btrust.btrustOne.admin.generalAdmin.emailTemplate.tests.pageObject;
 
 import btrust.BasePage;
 import io.qameta.allure.Step;
-import javafx.stage.Screen;
+// import javafx.stage.Screen;
 import org.openqa.selenium.*;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.interactions.Action;

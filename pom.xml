@@ -11,6 +11,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <aspectj.version>1.9.7</aspectj.version>
+        <cloudbeat.version>1.0.7-SNAPSHOT</cloudbeat.version>
         <threadCount>1</threadCount>
         <loopDuration>120</loopDuration>
         <loopCount>1</loopCount>
@@ -34,32 +35,38 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>4.9.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>7.6.0</version>
+            <version>8.6.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>7.7.0</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.0.3</version>
+            <version>5.4.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.13.9</version>
+            <version>2.21.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.github.automatedowl/allure-environment-writer -->
         <dependency>
@@ -84,7 +91,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-path</artifactId>
-            <version>4.4.0</version>
+            <version>5.1.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>
@@ -167,6 +174,37 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>6.0.14</version>
+        </dependency>
+
+        <!-- CloudBeat Kit dependencies -->
+        <!--
+        <dependency>
+            <groupId>io.cloudbeat</groupId>
+            <artifactId>cb-kit-testng</artifactId>
+            <version>${cloudbeat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cloudbeat</groupId>
+            <artifactId>cb-kit-selenium4</artifactId>
+            <version>${cloudbeat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cloudbeat</groupId>
+            <artifactId>cb-kit-common</artifactId>
+            <version>${cloudbeat.version}</version>
+        </dependency>
+        -->
+        <!-- Override an old Guava dependency in allure-environment-writer -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -197,6 +235,7 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <useSystemClassLoader>true</useSystemClassLoader>
                     <systemProperties>
                         <property>
                             <name>allure.results.directory</name>

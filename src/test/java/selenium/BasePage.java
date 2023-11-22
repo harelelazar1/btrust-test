@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
@@ -130,7 +131,7 @@ public class BasePage {
     }
 
     protected void waitForElementToBeClickable(WebElement el) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
         try {
             wait.until(ExpectedConditions.elementToBeClickable(el));
         } catch (Exception e) {
@@ -139,7 +140,7 @@ public class BasePage {
     }
 
     protected void waitForElementToBeVisibility(WebElement el) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
         try {
             wait.until(ExpectedConditions.visibilityOf(el));
         } catch (Exception e) {
@@ -148,7 +149,7 @@ public class BasePage {
     }
 
     protected void waitForTextToBeInElement(WebElement el, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
         try {
             wait.until(ExpectedConditions.textToBePresentInElement(el, text));
         } catch (Exception e) {
@@ -157,7 +158,7 @@ public class BasePage {
     }
 
     protected void waitForList(List<WebElement> list) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
         try {
             wait.until(ExpectedConditions.visibilityOfAllElements(list));
         } catch (Exception e) {
@@ -165,7 +166,7 @@ public class BasePage {
         }
     }
     protected void waitForList(List<WebElement> list,int timeOut) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
         try {
             wait.until(ExpectedConditions.visibilityOfAllElements(list));
         } catch (Exception e) {

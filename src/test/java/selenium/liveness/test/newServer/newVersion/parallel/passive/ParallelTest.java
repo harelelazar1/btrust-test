@@ -64,7 +64,7 @@ public class ParallelTest {
                     ffOptions.addPreference("general.useragent.override", user_agent);
                     ffOptions.setLogLevel(FirefoxDriverLogLevel.INFO);
                     if (System.getProperty("headless", "false").equals("true")) {
-                        ffOptions.setHeadless(true);
+                        ffOptions.addArguments("-headless");
                     }
                     driver = new FirefoxDriver(ffOptions);
                     testContext.setAttribute("WebDriver", driver);

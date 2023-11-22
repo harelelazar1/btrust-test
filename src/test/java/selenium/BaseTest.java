@@ -102,12 +102,12 @@ public class BaseTest {
                         chromeOptions.addArguments("disable-infobars");
                         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
                         driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), capabilities);
-                        BrowserVersion = capabilities.getVersion();
+                        BrowserVersion = capabilities.getBrowserVersion();
                         BrowserName = capabilities.getBrowserName();
                         break;
                     }
                     case "mobile": {
-                        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+                        DesiredCapabilities capabilities = new DesiredCapabilities();
                         capabilities.setBrowserName("chrome");
                         capabilities.setVersion("92.0");
                         capabilities.setCapability("sessionTimeout", "5m");
@@ -125,7 +125,7 @@ public class BaseTest {
                         chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
                         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
                         driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), capabilities);
-                        BrowserVersion = capabilities.getVersion();
+                        BrowserVersion = capabilities.getBrowserVersion();
                         BrowserName = capabilities.getBrowserName();
                         break;
                     }

@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeClass;
 
 import java.net.MalformedURLException;
 import java.net.URI;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -58,7 +59,7 @@ public class BaseMobileViewTest {
                 break;
             }
             case "docker": {
-                DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+                DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setBrowserName("chrome");
                 capabilities.setVersion("92.0");
                 capabilities.setCapability("sessionTimeout", "5m");
@@ -76,7 +77,7 @@ public class BaseMobileViewTest {
                 chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
                 capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
                 driver = new RemoteWebDriver(URI.create("http://192.168.1.194:4444/wd/hub").toURL(), capabilities);
-                BrowserVersion = capabilities.getVersion();
+                BrowserVersion = capabilities.getBrowserVersion();
                 BrowserName = capabilities.getBrowserName();
                 testContext.setAttribute("WebDriver", this.driver);
                 allureEnvironmentWriter(ImmutableMap.<String, String>builder()
@@ -86,7 +87,7 @@ public class BaseMobileViewTest {
                 break;
             }
         }
-        redirectWait = new WebDriverWait(driver, 20);
+        redirectWait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     public void failTest(String message) {

@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class ClientConfigurationPage extends BasePage {
@@ -46,7 +47,7 @@ public class ClientConfigurationPage extends BasePage {
     @FindBy(css = ".config-items > :nth-child(3) .MuiExpansionPanelDetails-root .item > .key")
     protected List<WebElement> othersKeysList;
 
-    WebDriverWait wait = new WebDriverWait(driver, 90);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
 
     @Step("Check if clientConfigurationTitleIsDisplayed")
     public boolean clientConfigurationTitleIsDisplayed(String title) {

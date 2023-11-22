@@ -160,7 +160,7 @@ public class TestUtils {
         options.addArguments("--headless");
         WebDriver chromeDriver = new ChromeDriver(options);
         Capabilities capabilities = ((HasCapabilities) chromeDriver).getCapabilities();
-        p.setProperty("CHROME_VERSION", capabilities.getVersion());
+        p.setProperty("CHROME_VERSION", capabilities.getBrowserVersion());
         chromeDriver.quit();
     }
 
