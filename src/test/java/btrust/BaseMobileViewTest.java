@@ -46,8 +46,16 @@ public class BaseMobileViewTest {
                 if (System.getProperty("HEADLESS", "false").equals("true")) {
                     options.addArguments("--headless");
                 }
-                Map<String, String> mobileEmulation = new HashMap<>();
-                mobileEmulation.put("deviceName", "iPhone X");
+                Map<String, Object> mobileEmulation = new HashMap<>();
+                Map<String, Object> deviceMetrics = new HashMap<>();
+                deviceMetrics.put("width", 375);
+                deviceMetrics.put("height", 812);
+                deviceMetrics.put("pixelRatio", 3.0);
+                mobileEmulation.put("deviceMetrics", deviceMetrics);
+                mobileEmulation.put("userAgent", "Mozilla/5.0 (Linux; Android 8.0.0;" +
+                        "Pixel 2 XL Build/OPD1.170816.004) AppleWebKit/537.36 (KHTML,like Gecko) " +
+                        "Chrome/67.0.3396.99 Mobile Safari/537.36");
+
                 options.addArguments("use-fake-ui-for-media-stream");
                 options.addArguments("use-fake-device-for-media-stream");
                 options.addArguments("allow-file-access-from-files");
